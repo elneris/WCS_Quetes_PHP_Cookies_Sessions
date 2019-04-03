@@ -1,3 +1,26 @@
+<?php
+session_start();
+
+if (isset($_POST['username']) && !empty($_POST['username'])) {
+  $_SESSION['user'] = $_POST['username'];
+}
+if (!isset($_SESSION['user'])){
+  header('Location: login.php');
+  exit();
+}
+
+if (isset($_GET['add_to_cart'])) {
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
+    if (!isset($_SESSION['cart'][$_GET['add_to_cart']])) {
+        $_SESSION['cart'][$_GET['add_to_cart']] = 1;
+    } else {
+        $_SESSION['cart'][$_GET['add_to_cart']] += 1;
+    }
+}
+?>
+
 <?php require 'inc/head.php'; ?>
 <section class="cookies container-fluid">
   <div class="row">
