@@ -1,4 +1,6 @@
-##Challenge Lors de ma formation à la wild code school Février 2019
+# Sessions et Cookies
+
+## Quête réalisée Lors de ma formation à la wild code school Février 2019
 
 The Cookie Factory" lance son site e-commerce
 
